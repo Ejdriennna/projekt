@@ -19,7 +19,7 @@
                 <li><a href="#">Write to us</a></li> 
             </ul>
 
-            <div class="icons">
+            <div class="icons"> <!-- ikony z knihovny -->
                 <a href="#"><span class="bi bi-twitter"></span></a>
                 <a href="https://www.facebook.com/adriana.nemeeth"><span class="bi bi-facebook"></span></a>
                 <a href="https://www.instagram.com/ejdriennna?igsh=dGU3ZTY2YTg3dDBw&utm_source=qr"><span class="bi bi-instagram"></span></a>
@@ -36,7 +36,7 @@
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae a quo perferendis
                 esse consequatur ex sequi corporis. Corporis, quae tenetur? Quo aperiam suscipit 
                 sunt. </p>
-            <p class="text-small">Reprehenderit, debitis qui, iure rerum porro fugit provident assumenda corrupti tempora 
+            <p>Reprehenderit, debitis qui, iure rerum porro fugit provident assumenda corrupti tempora 
                 aliquam eaque, eligendi voluptatum sit explicabo cum atque illum vitae nesciunt. Vero 
                 esse rem officia eum dignissimos in temporibus a obcaecati. </p>
 
@@ -72,11 +72,11 @@
 
         <section id="stories" class="three">
             <div class="text">
-            <h2>Let's hit the road</h2>
+            <h2>Story</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae a quo perferendis
                 esse consequatur ex sequi corporis. Corporis, quae tenetur? Quo aperiam suscipit 
                 sunt. </p>
-            <p class="text-small">Reprehenderit, debitis qui, iure rerum porro fugit provident assumenda corrupti tempora 
+            <p>Reprehenderit, debitis qui, iure rerum porro fugit provident assumenda corrupti tempora 
                 aliquam eaque, eligendi voluptatum sit explicabo cum atque illum vitae nesciunt. Vero 
                 esse rem officia eum dignissimos in temporibus a obcaecati. </p>
 
@@ -110,8 +110,9 @@
             </div>
         </section>
          
-        
+
         <section class="features">
+            <h2>FEATURES</h4>
             <div>
                 <div class="features-container">
 
@@ -153,6 +154,66 @@
 
                 </div>
             </div>
+        </section>
+
+        <section class="form">
+            <h2>Write to us</h2>
+            <form>
+                <div class="form-row">
+                    <div>
+                        <label for="name">Name:</label>
+                            <div>
+                            <input type="text" name="name" id="name" required> <!--required - atribut znamená, že uživatel musí vybrat jednu z možností před odesláním formuláře.-->
+                            </div>
+                    </div>
+
+                    <div>
+                        <label for="email">Email:</label>
+                            <div>
+                            <input type="email" name="email" id="email" required>
+                            </div>
+                    </div>
+
+                    <div>
+                        <label for="phone">Phone:</label>
+                            <div>
+                            <input type="tel" name="phone" id="email" required>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="form-line">
+                    <label>Contact me via:</label>
+                        <input type="radio" id="emial" required>
+                        <label for="email">Email</label>
+
+                        <input type="radio" id="phone" required>
+                        <label for="phone">Phone</label>
+
+                        <input type="radio" id="telegram" required> 
+                        <label for="telegram">Telegram</label>
+                </div>
+
+                <div class="formula-line">
+                    <label for="topic">Topic</label>
+                    <select name="topic" id="topic"> <!--vytvoření rozbalovacího seznamu-->
+                        <option value="post_my_story">Post my story</option> <!--value - hodnota, která bude odeslána na server, pokud uživatel vybere tuto možnost.-->
+                        <option value="give_feedback">Give feedback</option>
+                        <option value="ask_question">Ask question</option>
+                    </select>
+                </div>
+
+                <div class="formula-line">
+                    <label for="message">Message:</label>
+                    <input type="text" name="message" id="message">
+                </div>
+
+                <div class="formula-line"> <!-- recaptcha - je důležita pro ochranu před spamem a zneužitím -->
+                    <input type="radio" name="recaptcha" id="recaptcha">
+                    <label for="recaptcha">I am a human</label>
+                    <button class="formula-button">SEND</button>
+                </div>
+            </form>
         </section>
     
     

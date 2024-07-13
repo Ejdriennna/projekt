@@ -23,7 +23,7 @@ header {
     margin: 0;
     padding: 0;
     list-style: none;
-    margin-left: -500px;
+    margin-left: -400px;
     font-size: 15px;  
 }
 
@@ -127,7 +127,7 @@ img{
 }
 
 .images {
-    overflow: hidden;
+    overflow:visible;
 }
 
 .images img:hover {
@@ -140,6 +140,12 @@ img{
 .features {
     text-align: center;
     padding: 20px;
+    margin-top: 100px;
+}
+
+.features h2{
+    font-size: 30px;
+    font-family: monospace;
 }
 
 .features-container {
@@ -149,12 +155,46 @@ img{
 }
 
 .features-box {
-    background-color: white;
+    background-color: rgb(200, 208, 220);
     padding: 20px;
     border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(88, 83, 83, 0.1);
     text-align: center;
-    flex: 1 1 calc(33.333% - 40px); 
-    max-width: calc(33.333% - 40px);
+    width: 300px;
+    height: 200px;
 }
+
+/* formular*/ 
+.form h2 {
+    margin-left: 80px;
+}
+
+.form {
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    font-family: monospace;
+    font-size: 25px;
+}
+
+.form-row{
+   display: flex;
+   justify-content:space-around;
+   margin-bottom: 20px;
+}
+
+.form-row input{
+    width: 300px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: rgb(204, 200, 200);
+}
+
+.form-line {
+    margin-left: 55px;
+}
+
