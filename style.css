@@ -2,13 +2,16 @@ body {
     font-family: monospace;
     margin: 0;
     padding: 0;
-    background-color: rgb(220, 218, 218);
+    background-color: rgb(213, 216, 215);
 }
+
 /* hlavni menu */
+
 header {
     padding: 20px;
     border-bottom: 1px solid rgb(139, 137, 137);
     margin-bottom: 10px;
+    background-color: rgb(203, 217, 212);
 }
 
 .nav-menu {
@@ -50,11 +53,10 @@ header {
     margin: 0px;
    
 }
-/* konec hlavniho menu*/
-
 
 
 /* texty a foto */
+
 .one {
     display: flex;
     justify-content: space-between;
@@ -166,35 +168,71 @@ img{
 }
 
 /* formular*/ 
+
 .form h2 {
-    margin-left: 80px;
+    margin-top: 150px;
+    margin-left: 350px;
 }
 
 .form {
-    padding-left: 50px;
+    padding-left: 100px;
     display: flex;
     flex-direction: column;
+    margin-left: 100px;
 }
 
 label{
     font-family: monospace;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .form-row{
    display: flex;
-   justify-content:space-around;
-   margin-bottom: 20px;
+   gap: 100px;
+   margin-bottom: 40px;
 }
 
 .form-row input{
-    width: 300px;
+    width: 250px;
     height: 35px;
-    border-radius: 5px;
+    border-radius: 10px;
+    border: 3px solid #131212;
     background-color: rgb(204, 200, 200);
 }
 
-.form-line {
-    margin-left: 55px;
+.form-line{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    margin-bottom: 30px;
 }
 
+.form-topic{
+    margin-bottom: 20px;
+}
+
+select{
+    margin-top: 10px;
+    width: 1000px;
+    padding: 12px;
+    font-size: 15px;
+    border: 3px solid #131212;
+    border-radius: 10px;
+    appearance: none; /* skryje vychozi vzhled prohlizece */
+    background: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%23999" d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>')
+    no-repeat right 10px center; /* sipky na konci vyberu*/
+    background-color: rgb(204, 200, 200);
+    background-size: 20px; /* velikost sipek */
+}
+
+.form-message{
+    margin-bottom: 20px;
+}
+.form-message textarea{
+    width: 1000px;
+    height: 200px;
+    border: 3px solid #131212;
+    border-radius: 10px;
+    background-color: rgb(204, 200, 200);
+    
+}

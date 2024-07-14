@@ -15,8 +15,8 @@
             <ul>
                 <li><a href="#stories">Stories</a></li>
                 <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Write to us</a></li> 
+                <li><a href="#featuress">Features</a></li>
+                <li><a href="#formm">Write to us</a></li> 
             </ul>
 
             <div class="icons"> <!-- ikony z knihovny -->
@@ -46,7 +46,6 @@
             <aside>
                 <img src="./assets/images/lanovka.jpeg" alt="lanovka">
             </aside>
-
         </section>
 
         <section id="stories" class="two">
@@ -111,7 +110,7 @@
         </section>
          
 
-        <section class="features">
+        <section id="featuress" class="features">
             <h2>FEATURES</h4>
             <div>
                 <div class="features-container">
@@ -156,7 +155,7 @@
             </div>
         </section>
 
-        <section class="form">
+        <section id="formm" class="form">
             <h2>Write to us</h2>
             <form>
                 <div class="form-row">
@@ -184,28 +183,41 @@
 
                 <div class="form-line">
                     <label>Contact me via:</label>
-                        <input type="radio" id="emial" required>
+                        <div>
+                        <input type="checkbox" id="emial" required>
                         <label for="email">Email</label>
+                        </div>
 
-                        <input type="radio" id="phone" required>
+                        <div>
+                        <input type="checkbox" id="phone" required>
                         <label for="phone">Phone</label>
+                        </div>
 
-                        <input type="radio" id="telegram" required> 
+                        <div>
+                        <input type="checkbox" id="telegram" required> 
                         <label for="telegram">Telegram</label>
+                        </div>
                 </div>
 
-                <div class="formula-line">
-                    <label for="topic">Topic</label>
+                <div class="form-topic">
+                    <label for="topic">Topic:</label>
+                    <div>
                     <select name="topic" id="topic"> <!--vytvoření rozbalovacího seznamu-->
                         <option value="post_my_story">Post my story</option> <!--value - hodnota, která bude odeslána na server, pokud uživatel vybere tuto možnost.-->
                         <option value="give_feedback">Give feedback</option>
                         <option value="ask_question">Ask question</option>
                     </select>
+                    </div>
                 </div>
 
-                <div class="formula-line">
+                <div class="form-message">
+                    <div>
                     <label for="message">Message:</label>
-                    <input type="text" name="message" id="message">
+                    </div>
+
+                    <div>
+                    <textarea id="message" name="message"></textarea>
+                    </div>
                 </div>
 
                 <div class="formula-line"> <!-- recaptcha - je důležita pro ochranu před spamem a zneužitím -->
