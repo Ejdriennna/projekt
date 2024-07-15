@@ -56,48 +56,61 @@ header {
 
 
 /* texty a foto */
+section h2{
+    font-size: 45px;
+    font-style: italic;
+}
+.main-stories-bigger {
+    display: flex;
+    justify-content: space-between;
+    margin: -10px 50px;
+    border-bottom: 1px solid gray;
+}
+.main-stories-bigger aside{
+    display: flex;
+    align-items: stretch;
+}
 
-.one {
+.main-stories {
     display: flex;
     justify-content: space-between;
     margin: -10px 50px;
     border-bottom: 1px solid gray;
 }
 
-.two{
+.main-stories aside{
     display: flex;
-    justify-content: space-between;
-    margin-left: 20px;
-    margin-top: 10px;
-    border-bottom: 1px solid gray;
+    align-items: stretch;
 }
 
-.three{
-    display: flex;
-    justify-content: space-between;
-    margin-right: 50px;
-    border-bottom: 1px solid gray;
-}
-
-section h2{
-    font-size: 45px;
-    font-style: italic;
-}
-
-.text {
+.main-text {
     width: 400px;
     padding: 100px;
     font-family:monospace;
 }
 
 button{
+    box-shadow: 0 8px 8px rgba(135, 202, 153, 0.1);
+    margin-top: 50px;
+    font-size: 20px;
     width: 100px;
     height: 50px;
-    border-radius: 20px;
+    border-radius: 500px;
     background-color: rgb(229, 229, 229);
     cursor: pointer;
+    transition: 0.9s, color 0.3s; /* plynuly prechod barvy*/
 }
- 
+
+button:hover{
+    background-color: rgb(148, 227, 175);
+    color: green;
+}  
+
+.main-stories-bigger img{
+    width: 625px;
+    padding-left: 200px;
+    max-height:max-content;
+}
 img{
     width: 500px;
     height: auto;
@@ -234,5 +247,34 @@ select{
     border: 3px solid #131212;
     border-radius: 10px;
     background-color: rgb(204, 200, 200);
-    
+}
+
+.form-button{
+    margin-left: 740px;
+    font-size: 20px;
+    margin-top: 0px;
+}
+
+
+/* footer */
+
+.container-footer-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid black;
+    margin-top: 50px;
+}
+
+.footer-icons{
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 50px;
+    margin: 20px;
+}
+
+.footer-container p{
+   margin-left: 580px; 
+   font-size: 20px;
 }
