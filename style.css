@@ -27,7 +27,9 @@ header {
     padding: 0;
     list-style: none;
     margin-left: -400px;
-    font-size: 15px;  
+    font-size: 15px; 
+    position: sticky;
+    left: 250px;  
 }
 
 .nav-menu li {
@@ -51,7 +53,6 @@ header {
 .nav-menu h1 {
     font-size: 25px;
     margin: 0px;
-   
 }
 
 
@@ -59,39 +60,28 @@ header {
 section h2{
     font-size: 45px;
     font-style: italic;
+   margin-top: 40px;
 }
+
 .main-stories-bigger {
     display: flex;
-    justify-content: space-between;
     margin: -10px 50px;
     border-bottom: 1px solid gray;
-}
-.main-stories-bigger aside{
-    display: flex;
-    align-items: stretch;
 }
 
 .main-stories {
     display: flex;
-    justify-content: space-between;
-    margin: -10px 50px;
+    margin: 0px 50px;
     border-bottom: 1px solid gray;
 }
 
-.main-stories aside{
-    display: flex;
-    align-items: stretch;
-}
-
 .main-text {
-    width: 400px;
-    padding: 100px;
+    padding: 50px;
     font-family:monospace;
 }
 
 button{
-    box-shadow: 0 8px 8px rgba(135, 202, 153, 0.1);
-    margin-top: 50px;
+    box-shadow: 0 8px 8px rgba(135, 202, 153, 0.1);  
     font-size: 20px;
     width: 100px;
     height: 50px;
@@ -107,15 +97,13 @@ button:hover{
 }  
 
 .main-stories-bigger img{
-    width: 625px;
-    padding-left: 200px;
-    max-height:max-content;
-}
-img{
-    width: 500px;
+    width: 450px;
     height: auto;
 }
-
+.main-stories img{
+    width: 400px;
+    height: auto;
+}
 
 /* galerie */
 
@@ -139,9 +127,6 @@ img{
     width: 350px;
     height: auto;
     transition: transform 0.3s ease;
-}
-
-.images {
     overflow:visible;
 }
 
@@ -277,4 +262,115 @@ select{
 .footer-container p{
    margin-left: 580px; 
    font-size: 20px;
+}
+
+/* responsivni design */
+
+@media (max-width: 850px) and (min-width: 600px) {
+/* menu a stories*/
+    .nav-menu .icons {
+        display: none;
+    }
+
+    .main-stories-bigger img{
+    width: 350px;
+    height: auto;
+    }
+    
+    .main-stories img{
+        width: 300px;
+        height: auto;
+    }
+
+    .main-text{
+        padding: 0px;
+        margin: 0px 40px;
+    }
+  
+    /*galerie*/
+    .images img{
+        width: 350px;
+        height: auto;
+        transition: transform 0.3s ease;
+        overflow:scroll;
+    }
+
+    /*formular*/
+    .form h2 {
+        margin-top: 20px;
+        margin-left: 190px;
+    }
+    
+    .form {
+        padding-left: 20px;
+        margin-left: 30px;
+    }
+    
+    label{
+        font-size: 15px;
+    }
+    
+    .form-row{
+       gap: 10px;
+       margin-bottom: 20px;
+    }
+    
+    .form-row input{
+        width: 220px;
+        height: 30px;
+    }
+    
+    .form-line{
+        gap: 50px;
+        margin-bottom: 20px;
+    }
+    
+    .form-topic{
+        margin-bottom: 10px;
+    }
+    
+    select{
+        margin-top: 10px;
+        width: 705px;
+        padding:10px;
+        font-size: 10px;
+        background-size: 15px;
+    }
+    
+    .form-message{
+        margin-bottom: 10px;
+    }
+    .form-message textarea{
+        width: 700px;
+        height: 150px;
+    }
+    
+    .form-button{
+        margin-left: 610px;
+        font-size: 15px;
+        margin-top: -10px;
+    }
+
+
+    /* footer */
+    .container-footer-icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 1px solid black;
+        margin-top: 50px;
+    }
+    
+    .footer-icons{
+        width: 20px;
+        height: 20px;
+        border: 2px solid black;
+        border-radius: 50px;
+        margin: 20px;
+    }
+    
+    .footer-container p{
+       margin-left: 370px; 
+       font-size: 12px;
+    }
 }
