@@ -34,7 +34,19 @@ header {
 
 .nav-menu li {
     margin-right: 25px;
+    line-height: 38px;
+    height: 40px;
+    width: 120px;
+    text-align: center;
 }
+
+.nav-menu li:hover{
+    background-color: #87b098;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+
 
 .nav-menu ul li a {
     color: rgb(133, 128, 128);
@@ -55,6 +67,31 @@ header {
     margin: 0px;
 }
 
+/* dropdown menu*/ 
+
+.dropdown_main {
+    display: flex;
+    margin-left: 0px;
+    margin-top: 10px;  
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(203, 217, 212);
+    padding: 0;
+    list-style: none;
+}
+
+.dropdown_main > li:hover > .dropdown {
+    display: block;
+}
+
+.dropdown_main > li {
+    position: relative;
+}
 
 /* texty a foto */
 section h2{
@@ -76,6 +113,7 @@ section h2{
 }
 
 .main-text {
+    margin-top: 40px;
     padding: 50px;
     font-family:monospace;
 }
@@ -92,49 +130,73 @@ button{
 }
 
 button:hover{
-    background-color: rgb(148, 227, 175);
+    background-color:  #87b098;
     color: green;
 }  
 
 .main-stories-bigger img{
-    width: 450px;
+    width: 100%;
     height: auto;
 }
 .main-stories img{
-    width: 400px;
+    width: 100%;
     height: auto;
 }
 
 /* galerie */
-
-.gallery {
+.caption-gallery{
     text-align: center;
-    padding: 50px;
+    margin-top: 60px;
+    font-size: 40px;
 }
 
-.gallery h3{
-    font-size: 30px;
-    font-family:monospace;
-    margin-bottom: 40px;
-}
-
-.container{
+.gallery{
     display: flex;
-    justify-content: center;
 }
 
-.images img{
+.gallery-images {
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+    /*scroll-snap-type: x mandatory;*/
+    /*scroll-snap-align: start; /*k zajištění plynulého posouvání ,start znamená, že se každá položka galerie zarovná na začátek kontejneru, když se zastaví*/
+    /*flex-shrink: 0;/* zajistuje, aby fotka zachovala svoji velikost*/
+
+.description {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 12px;
+    transform: translateY(100%);
+    transition: transform .3s;
+    transition-timing-function: ease-in; /* pomalej rozjezd */
+}
+
+.description-main { 
+    font-size: 20px;
+}
+
+.gallery-images img{
     width: 350px;
     height: auto;
     transition: transform 0.3s ease;
-    overflow:visible;
 }
 
-.images img:hover {
-    transform: scale(1.1);
+.gallery-images:hover img {
+    transform: scale(1.55);
 }
 
+.gallery-images:hover .description{
+    transform: translateY(0%);
+    transition-timing-function: ease-out;
 
+}
 /* rady tipy */
 
 .features {
@@ -252,42 +314,55 @@ select{
 }
 
 .footer-icons{
-    width: 50px;
-    height: 50px;
+    width: 20px;
+    height: 20px;
     border: 2px solid black;
     border-radius: 50px;
     margin: 20px;
 }
 
 .footer-container p{
-   margin-left: 580px; 
-   font-size: 20px;
+   margin-left: 660px; 
+   font-size: 10px;
 }
 
-/* responsivni design */
+/* responsiv */
 
 @media (max-width: 850px) and (min-width: 600px) {
+
 /* menu a stories*/
+
     .nav-menu .icons {
         display: none;
     }
 
     .main-stories-bigger img{
-    width: 350px;
+    width: 100%;
     height: auto;
     }
     
     .main-stories img{
-        width: 300px;
+        width: 100%;
         height: auto;
     }
 
     .main-text{
         padding: 0px;
-        margin: 0px 40px;
+        margin: 20px 10px;
     }
   
+    .main-text h2 {
+        font-size: 30px;
+    }
+
+    button{
+        width: 70px;
+        height: 30px;
+        border-radius: 20px;
+        font-size: 15px;
+    }
     /*galerie*/
+
     .images img{
         width: 350px;
         height: auto;
@@ -296,6 +371,7 @@ select{
     }
 
     /*formular*/
+
     .form h2 {
         margin-top: 20px;
         margin-left: 190px;
@@ -340,6 +416,7 @@ select{
     .form-message{
         margin-bottom: 10px;
     }
+
     .form-message textarea{
         width: 700px;
         height: 150px;
@@ -351,21 +428,14 @@ select{
         margin-top: -10px;
     }
 
-
     /* footer */
     .container-footer-icons{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-top: 1px solid black;
         margin-top: 50px;
     }
     
     .footer-icons{
         width: 20px;
         height: 20px;
-        border: 2px solid black;
-        border-radius: 50px;
         margin: 20px;
     }
     
@@ -373,4 +443,132 @@ select{
        margin-left: 370px; 
        font-size: 12px;
     }
+}
+
+@media (max-width: 599px){
+    /* menu a stories*/
+
+    .nav-menu .icons {
+        display: none;
+    }
+
+    .nav-menu ul{
+        display: none;
+    }
+
+    .main-stories-bigger {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .main-stories-bigger img{
+        width: 80%;
+        height: auto;
+        margin-left: 70px;
+     }
+        
+    .main-stories img{
+        width: 70%;
+        height: auto;
+        margin-left:70px;
+        margin-top: 10px;
+     }
+
+    .main-stories {
+        display: flex;
+       flex-direction:column;
+    }
+
+     .main-text h2 {
+        font-size: 30px;
+    }
+
+    .main-text{
+        margin-top: -20px;
+    }
+
+    button{
+        width: 70px;
+        height: 30px;
+        border-radius: 20px;
+        font-size: 15px;
+    }
+
+    /*dotaznik*/
+
+    .form h2 {
+        margin-top: 0px;
+        margin-left: 10px;
+        font-size: 20px;
+    }
+    
+    .form {
+        padding-left: 0px;
+        margin-left: 20px;
+    }
+    
+    label{
+        font-size: 10px;
+    }
+    
+    .form-row{
+       gap: 10px;
+       margin-bottom: 20px;
+    }
+    
+    .form-row input{
+        width: 165px;
+        height: 30px;
+    }
+    
+    .form-line{
+        gap: 50px;
+        margin-bottom: 20px;
+    }
+    
+    .form-topic{
+        margin-bottom: 10px;
+    }
+    
+    select{
+        margin-top: 10px;
+        width: 540px;
+        padding:10px;
+        font-size: 10px;
+        background-size: 15px;
+    }
+    
+    .form-message{
+        margin-bottom: 10px;
+    }
+
+    .form-message textarea{
+        width: 530px;
+        height: 100px;
+    }
+    
+    .form-button{
+        margin-left: 375px;
+        font-size: 10px;
+        margin-top: -10px;
+        width: 60px;
+        height: 50px;
+        border-radius: 8px;
+    }
+
+    .container-footer-icons{
+        margin-top: 50px;
+    }
+    
+    .footer-icons{
+        width: 15px;
+        height: 15px;
+        margin: 20px;
+    }
+    
+    .footer-container p{
+       margin-left: 230px; 
+       font-size: 10px;
+    }
+       
 }
