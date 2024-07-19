@@ -9,7 +9,7 @@ body {
 
 header {
     padding: 20px;
-    border-bottom: 1px solid rgb(139, 137, 137);
+    border-bottom: 3px solid rgb(118, 143, 128);
     margin-bottom: 10px;
     background-color: rgb(203, 217, 212);
 }
@@ -103,13 +103,13 @@ section h2{
 .main-stories-bigger {
     display: flex;
     margin: -10px 50px;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid rgb(18, 68, 39);
 }
 
 .main-stories {
     display: flex;
     margin: 0px 50px;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid rgb(18, 68, 39);
 }
 
 .main-text {
@@ -154,23 +154,20 @@ button:hover{
     display: flex;
 }
 
-.gallery-images {
+.gallery-images { /* rodic pro descprition*/ 
     margin: 0px;
     padding: 0px;
-    position: relative;
+    position: relative; /* nastavena pozice relativne ke sve normalni pozici, pak jeho deti muzeme umistit absolutne uvnitr (description jsou jeho deti)*/
     color: white;
     text-align: center;
     overflow: hidden;
+    display: block; /* implicitni hodnota, vychozi hodnota, muze se a nemusi uvadet */
 }
 
-    /*scroll-snap-type: x mandatory;*/
-    /*scroll-snap-align: start; /*k zajištění plynulého posouvání ,start znamená, že se každá položka galerie zarovná na začátek kontejneru, když se zastaví*/
-    /*flex-shrink: 0;/* zajistuje, aby fotka zachovala svoji velikost*/
-
 .description {
-    position: absolute;
+    position: absolute;  /* umisten relativně k nejbližšímu rodiči s nastavenou pozicí,*/
     bottom: 0;
-    width: 100%;
+    width: 100%; /* zabira 100% sirku sveho rodice*/
     background-color: rgba(0, 0, 0, 0.7);
     padding: 12px;
     transform: translateY(100%);

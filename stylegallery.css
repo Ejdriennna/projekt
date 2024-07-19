@@ -2,16 +2,19 @@ body {
     font-family: monospace;
     margin: 0;
     padding: 0;
-    background-color: rgb(213, 216, 215);
+    background-color: rgb(201, 207, 205);
 }
+
 
 /* hlavni menu */
 
 header {
     padding: 20px;
-    border-bottom: 1px solid rgb(139, 137, 137);
+    border-bottom: 2px solid rgb(14, 53, 57);
     margin-bottom: 10px;
-    background-color: rgb(203, 217, 212);
+    background-color: rgb(136, 205, 204);
+    background-repeat: no-repeat;
+    opacity: 0.4;
 }
 
 .nav-menu {
@@ -24,7 +27,6 @@ header {
 .nav-menu ul {
     margin: 0;
     padding: 0;
-    list-style: none;
     margin-left: -200px;
     font-size: 15px; 
     position: sticky; 
@@ -34,7 +36,7 @@ header {
     margin-right: 15px;
     line-height: 30px;
     height: 40px;
-    width: 100px;
+    width: 120px;
     text-align: center;
     display: flex;
     align-items: center;
@@ -42,21 +44,22 @@ header {
 }
 
 .nav-menu li:hover{
-    background-color: #87b098;
+    background-color: #18aba6;
     cursor: pointer;
     border-radius: 20px;
 }
 
 .nav-menu ul li a {
-    color: rgb(133, 128, 128);
+    color: rgb(18, 17, 17);
     text-decoration: none;
 }
 
 .icons{
     margin-right: 50px;
 }
+
 .icons a {
-    color: rgb(105, 100, 100);
+    color: rgb(21, 20, 20);
     text-decoration: none;
     margin-left: 10px;
 }
@@ -66,34 +69,31 @@ header {
     margin: 0px;
 }
 
+/* dropdown menu*/
 .dropdown_main {
-    display: flex;
-    margin-left: 0px;
-    margin-top: 20px;  
+    display: flex; /* rodic - flex- menu ma byt vodorovne nebo svisle*/
 }
 
 .dropdown {
-    display: none;
-    position: absolute;
-    color: rgb(115, 112, 112)
+    display: none; /* nezobrazi se, dokud neprejede mys*/
+    color: black;
 }
 
-.dropdown_main > li:hover > .dropdown {
-    display: block;
+.dropdown_main > li:hover > .dropdown { /* kdyz přejedu myší nad jakýmkoliv li prvkem, který je přímým potomkem .dropdown_main, tak .dropdown prvek uvnitř tohoto li se zobrazí (display: block;).*/
+    display: block; /*zobrazi se pri prejeti mysi*/
 }
 
-.dropdown_main > li {
-    position: relative;
-}
-
-.dropdown_main > li > .dropdown {
-    position: absolute;
-    top: 30px;
+.dropdown_main > li > .dropdown { /* absolute- Prvek je umístěn relativně k nejbližšímu rodiči s nastavenou pozicí*/
+    position: absolute; /*umisten k nejblizsimu rodici coz je dropdown - diky tomu se zobrazi pod sebou pod gallery, */
+    top: 40px;
     left: 200px;
 }
 
+.dropdown_main > li {
+    position: relative; /*umisteny relativne k jeho k pozici, ne ke strance jako k celku*/
+}
+
 .dropdown > li {
-    position: relative;
     width: 100px;
     height: 12px;
     padding: 10px 0;
@@ -107,38 +107,49 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 10px;
+    gap: 8px;
 }
 
 .caption-gallery{
-    text-align: center;
     font-size: 40px;
     font-family: monospace;
     font-style:oblique;
-    background-color: #cee1d6;
     height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.gallery-images {
+.caption-gallery-thailand {
+    font-size: 40px;
+    font-family: monospace;
+    font-style:oblique;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+.gallery-images { /* rodic pro descprition*/ 
     margin: 0px;
     padding: 0px;
-    position: relative;
+    position: relative; /* nastavena pozice relativne ke sve normalni pozici, pak jeho deti muzeme umistit absolutne uvnitr (description jsou jeho deti)*/
     color: white;
     text-align: center;
     overflow: hidden;
     font-size: 8px;
+    display: block; /* implicitni hodnota, vychozi hodnota, muze se a nemusi uvadet */
 }
+
 .description {
-    position: absolute;
+    position: absolute; /* umisten relativně k nejbližšímu rodiči s nastavenou pozicí,*/
     bottom: 0;
-    width: 100%;
+    width: 100%; /* zabira 100% sirku sveho rodice*/
     background-color: rgba(0, 0, 0, 0.4);
     padding: 6px;
     transform: translateY(100%);
     transition: transform .3s;
-    transition-timing-function: ease-in; /* pomalej rozjezd */
 }
 
 .description-main { 
@@ -157,6 +168,30 @@ header {
 
 .gallery-images:hover .description{
     transform: translateY(0%);
-    transition-timing-function: ease-out;
+
+}
+
+
+
+@media (max-width: 850px) and (min-width: 600px) {
+
+    /* menu a stories*/
+    
+    .nav-menu .icons {
+        display: none;
+    }
+
+}
+
+@media (max-width: 599px){
+        /* menu a stories*/
+    
+    .nav-menu .icons {
+        display: none;
+    }
+
+    .nav-menu ul{
+        display: none;
+    }
 
 }
