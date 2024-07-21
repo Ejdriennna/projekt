@@ -31,13 +31,15 @@ function setup () {
 
 // tahle funkce overuje spravnost odpovedi 
 function overeniCaptcha () {
-    const odpovedUzivatele = document.getAnimations ('captchaAnswer').value; 
+    const odpovedUzivatele = document.getElementById('captchaAnswer').value; 
     // do tehle konstatni se ulozi zadanou odpoved uzivatele -value je ulozena hodnota 
 
-    const spravnaOdpoved = document.getElementById('captchaAnswer').getAttribute ('data-corect');
+    const spravnaOdpoved = document.getElementById('captchaAnswer').getAttribute('data-corect');
     // vytahne hodnoty pridanyho atributu 
 
-    if (odpovedUzivatele.toUpperCase() === spravnaOdpoved()) { // odpoved uzivatele se prepise do velkych pismen, protoze jsem je tak ulozila do objektu
+    if (odpovedUzivatele.toUpperCase() === spravnaOdpoved) { // odpoved uzivatele se prepise do velkych pismen, protoze jsem je tak ulozila do objektu
+        console.log(odpovedUzivatele.toUpperCase())
+        console.log(spravnaOdpoved)
         return true;
     } else {
         alert('Incorect answer!');
