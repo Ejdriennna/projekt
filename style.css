@@ -9,7 +9,7 @@ body {
 
 header {
     padding: 20px;
-    border-bottom: 3px solid rgb(118, 143, 128);
+    border-bottom: 1px solid rgb(118, 143, 128);
     margin-bottom: 10px;
     background-color: rgb(203, 217, 212);
 }
@@ -65,32 +65,6 @@ header {
 .nav-menu h1 {
     font-size: 25px;
     margin: 0px;
-}
-
-/* dropdown menu*/ 
-
-.dropdown_main {
-    display: flex;
-    margin-left: 0px;
-    margin-top: 10px;  
-}
-
-.dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: rgb(203, 217, 212);
-    padding: 0;
-    list-style: none;
-}
-
-.dropdown_main > li:hover > .dropdown {
-    display: block;
-}
-
-.dropdown_main > li {
-    position: relative;
 }
 
 /* texty a foto */
@@ -298,7 +272,6 @@ select{
     font-size: 20px;
     margin-top: 0px;
 }
-
 
 /* footer */
 

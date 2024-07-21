@@ -13,7 +13,7 @@
             <h1>TOUR-GUIDE</h1>
 
             <ul>
-                <li><a href="#stories">Stories</a></li>
+                <li><a href="#stories">Stories </a></li>
                 <li><a href="indexgallery.html">Gallery</a></li>
                 <li><a href="#featuress">Features</a></li>
                 <li><a href="#formm">Write to us</a></li> 
@@ -167,9 +167,9 @@
             </div>
         </section>
 
-        <section id="formm" class="form">
+        <section class="form">
             <h2>Write to us</h2>
-            <form>
+            <form method="get" target="_self">
                 <div class="form-row">
                     <div>
                         <label for="name">Name:</label>
@@ -232,9 +232,9 @@
                     </div>
                 </div>
 
-                <div class="form-robot"> <!-- recaptcha - je důležita pro ochranu před spamem a zneužitím -->
-                    <input type="radio" name="recaptcha" id="recaptcha">
-                    <label for="recaptcha">I am a human</label>
+                <div class="form-capatcha"> <!-- recaptcha - je důležita pro ochranu před spamem a zneužitím -->
+                    <label for="captchaAnswer">What is the capital city of <span id="captchaQuestion"></span>?</label>
+                    <input type="text" name="captchaAnswer" id="captchaAnswer" required>
                     <button class="form-button">SEND</button>
                 </div>
             </form>
@@ -261,6 +261,8 @@
 
             <p> &copy; UNITTLED 2024 </p>
         </footer>
+
+        <script src="script.js"></script>
 
     
 </body>

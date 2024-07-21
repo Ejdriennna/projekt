@@ -33,9 +33,7 @@ header {
 }
 
 .nav-menu li {
-    margin-right: 15px;
-    line-height: 30px;
-    height: 40px;
+    height: 50px;
     width: 120px;
     text-align: center;
     display: flex;
@@ -92,14 +90,6 @@ header {
 .dropdown_main > li {
     position: relative; /*umisteny relativne k jeho k pozici, ne ke strance jako k celku*/
 }
-
-.dropdown > li {
-    width: 100px;
-    height: 12px;
-    padding: 10px 0;
-    margin-top: 10px;
-}
-
 
 /* galerie */
 .gallery{
