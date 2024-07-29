@@ -85,6 +85,7 @@ section h2{
 
 .main-stories {
     display: flex;
+    align-items: center;
     margin: 0px 50px;
     border-bottom: 1px solid rgb(18, 68, 39);
 }
@@ -104,6 +105,14 @@ button{
     background-color: rgb(229, 229, 229);
     cursor: pointer;
     transition: 0.9s, color 0.3s; /* plynuly prechod barvy*/
+}
+
+button a{
+    color: black;
+    text-decoration: none;
+}
+button a:hover{ 
+    color: green; 
 }
 
 button:hover{
@@ -129,6 +138,7 @@ button:hover{
 
 .gallery{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .gallery-images { /* rodic pro descprition*/ 
@@ -271,9 +281,9 @@ select{
 }
 
 .form-button{
-    margin-left: 740px;
+    margin-left: 900px;
     font-size: 20px;
-    margin-top: 0px;
+    margin-top: -20px;
 }
 
 /* footer */
@@ -336,11 +346,37 @@ select{
     }
     /*galerie*/
 
-    .images img{
-        width: 350px;
+    .gallery-images {
+        width: 45%; /* Dvě fotky vedle sebe */
+        margin: 10px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .gallery-images img {
+        width: 100%;
         height: auto;
         transition: transform 0.3s ease;
-        overflow:scroll;
+    }
+
+    .gallery-images:hover img {
+        transform: scale(1.1); /* Přiblíží pouze obrázek, nikoli kontejner */
+    }
+
+    .description {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 12px;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+        transition-timing-function: ease-in;
+    }
+
+    .gallery-images:hover .description {
+        transform: translateY(0%);
+        transition-timing-function: ease-out;
     }
 
     /*formular*/
@@ -521,12 +557,12 @@ select{
     }
     
     .form-button{
-        margin-left: 375px;
+        margin-left: 475px;
         font-size: 10px;
         margin-top: -10px;
         width: 60px;
-        height: 50px;
-        border-radius: 8px;
+        height: 30px;
+        border-radius: 30px;
     }
 
     .container-footer-icons{
@@ -543,5 +579,50 @@ select{
        margin-left: 230px; 
        font-size: 10px;
     }
+    /* fotogalerie */
+
+    .gallery-images {
+        width: 50%; /* Jedna fotka */
+        margin: 10px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .gallery-images img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .gallery-images:hover img {
+        transform: scale(1.1); /* Přiblíží pouze obrázek, nikoli kontejner */
+    }
+
+    .description {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 20%;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 12px;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+        transition-timing-function: ease-in;
+    }
+
+    .description-main { 
+        font-size: 10px;
+    }
+
+    .description-secundary { 
+        font-size: 10px;
+    }
+
+    .gallery-images:hover .description {
+        transform: translateY(0%);
+        transition-timing-function: ease-out;
+    }
+
+    
        
 }
