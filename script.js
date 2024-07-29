@@ -1,5 +1,5 @@
 
-// pole  s objektama - dava se carka, neuzavira se strednikem
+// pole  s objektama
 const cityAndCountry = [ 
 { country : "CZECHIA",
   city: "PRAGUE",
